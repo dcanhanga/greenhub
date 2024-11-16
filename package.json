@@ -5,7 +5,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test:api": "npm --prefix apps/api test",
+    "test": "npm-run-all test:*",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -13,7 +14,7 @@
       "biome check --write --no-errors-on-unmatched"
     ],
     "*.{spec.ts,test.ts}": [
-      "npm run test:combo"
+      "npm run test:api"
     ]
   },
   "devDependencies": {
