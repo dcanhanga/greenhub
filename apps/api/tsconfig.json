@@ -1,0 +1,17 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+   "lib": ["ES2023"],
+    "target": "ES2022",
+    "outDir": "./dist",
+    "rootDirs": ["src", "tests"],
+		"baseUrl": "src",
+		"paths": {
+			"@/tests/*": ["../tests/*"],
+			"@/*": ["*"]
+		}
+
+  },
+  "exclude": ["node_modules"],
+  "include": ["."]
+}
